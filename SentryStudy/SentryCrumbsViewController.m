@@ -25,10 +25,18 @@
     btn.layer.borderColor = [UIColor blueColor].CGColor;
     
     [btn setTitle:@"Crumbs" forState:UIControlStateNormal];
+    [btn addTarget:self action:@selector(makeCrash:) forControlEvents:UIControlEventTouchUpInside];
     [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     
     [self.view addSubview:btn];
     
+}
+
+- (void)makeCrash:(id)send{
+ 
+    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+    NSString *value = nil;
+    [dic setObject:value forKey:@"123"];
 }
 
 /*
