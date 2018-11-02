@@ -18,8 +18,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = @"Sentry Crumbs";
+    self.view.backgroundColor = [UIColor whiteColor];
     
     UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(100, 150, 100, 50)];
+    btn.layer.borderWidth = 1;
+    btn.layer.borderColor = [UIColor blueColor].CGColor;
+    
     [btn setTitle:@"Crumbs" forState:UIControlStateNormal];
     [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     
