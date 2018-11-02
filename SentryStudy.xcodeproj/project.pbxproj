@@ -1,0 +1,433 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8F5DAF20E13B2EF437DA2DE4 /* Pods_SentryStudy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFD7CCE896C72BD30977FC60 /* Pods_SentryStudy.framework */; };
+		E9AFA656218A9AF800244588 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E9AFA655218A9AF800244588 /* AppDelegate.m */; };
+		E9AFA659218A9AF800244588 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = E9AFA658218A9AF800244588 /* ViewController.mm */; };
+		E9AFA65C218A9AF800244588 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9AFA65A218A9AF800244588 /* Main.storyboard */; };
+		E9AFA65E218A9AF900244588 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9AFA65D218A9AF900244588 /* Assets.xcassets */; };
+		E9AFA661218A9AF900244588 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9AFA65F218A9AF900244588 /* LaunchScreen.storyboard */; };
+		E9AFA664218A9AF900244588 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E9AFA663218A9AF900244588 /* main.m */; };
+		E9AFA66D218C407100244588 /* SentryCrumbsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9AFA66C218C407100244588 /* SentryCrumbsViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		E9AFA66A218A9F7A00244588 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = pattern.proxy;
+			isEditable = 1;
+			outputFiles = (
+			);
+			script = "# Type a script or drag a script file from your workspace to insert its path.\nif which sentry-cli >/dev/null; then\nexport SENTRY_ORG=comstudydaily\nexport SENTRY_PROJECT=sentrystudy\nexport SENTRY_AUTH_TOKEN=76847d79d27943bfa11d92bbb1d71f35c684363da44e4a28af7e5f1d3852a5f8\nERROR=$(sentry-cli upload-dsym 2>&1 >/dev/null)\nif [ ! $? -eq 0 ]; then\necho \"warning: sentry-cli - $ERROR\"\nfi\nelse\necho \"warning: sentry-cli not installed, download from https://github.com/getsentry/sentry-cli/releases\"\nfi\n";
+		};
+/* End PBXBuildRule section */
+
+/* Begin PBXFileReference section */
+		2C9CD5FB477718C7B53D8018 /* Pods-SentryStudy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SentryStudy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SentryStudy/Pods-SentryStudy.debug.xcconfig"; sourceTree = "<group>"; };
+		399695F0A82A07FD6F0F0316 /* Pods-SentryStudy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SentryStudy.release.xcconfig"; path = "Pods/Target Support Files/Pods-SentryStudy/Pods-SentryStudy.release.xcconfig"; sourceTree = "<group>"; };
+		AFD7CCE896C72BD30977FC60 /* Pods_SentryStudy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SentryStudy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9AFA651218A9AF800244588 /* SentryStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SentryStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9AFA654218A9AF800244588 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E9AFA655218A9AF800244588 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E9AFA657218A9AF800244588 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E9AFA658218A9AF800244588 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
+		E9AFA65B218A9AF800244588 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E9AFA65D218A9AF900244588 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E9AFA660218A9AF900244588 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E9AFA662218A9AF900244588 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9AFA663218A9AF900244588 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E9AFA66B218C407100244588 /* SentryCrumbsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SentryCrumbsViewController.h; sourceTree = "<group>"; };
+		E9AFA66C218C407100244588 /* SentryCrumbsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SentryCrumbsViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E9AFA64E218A9AF800244588 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F5DAF20E13B2EF437DA2DE4 /* Pods_SentryStudy.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		570C426594436B51369CE608 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AFD7CCE896C72BD30977FC60 /* Pods_SentryStudy.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E9AFA648218A9AF800244588 = {
+			isa = PBXGroup;
+			children = (
+				E9AFA653218A9AF800244588 /* SentryStudy */,
+				E9AFA652218A9AF800244588 /* Products */,
+				FDE779EADE6D3B2E2573C4B4 /* Pods */,
+				570C426594436B51369CE608 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E9AFA652218A9AF800244588 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E9AFA651218A9AF800244588 /* SentryStudy.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E9AFA653218A9AF800244588 /* SentryStudy */ = {
+			isa = PBXGroup;
+			children = (
+				E9AFA654218A9AF800244588 /* AppDelegate.h */,
+				E9AFA655218A9AF800244588 /* AppDelegate.m */,
+				E9AFA657218A9AF800244588 /* ViewController.h */,
+				E9AFA658218A9AF800244588 /* ViewController.mm */,
+				E9AFA65A218A9AF800244588 /* Main.storyboard */,
+				E9AFA65D218A9AF900244588 /* Assets.xcassets */,
+				E9AFA65F218A9AF900244588 /* LaunchScreen.storyboard */,
+				E9AFA662218A9AF900244588 /* Info.plist */,
+				E9AFA663218A9AF900244588 /* main.m */,
+				E9AFA66B218C407100244588 /* SentryCrumbsViewController.h */,
+				E9AFA66C218C407100244588 /* SentryCrumbsViewController.m */,
+			);
+			path = SentryStudy;
+			sourceTree = "<group>";
+		};
+		FDE779EADE6D3B2E2573C4B4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2C9CD5FB477718C7B53D8018 /* Pods-SentryStudy.debug.xcconfig */,
+				399695F0A82A07FD6F0F0316 /* Pods-SentryStudy.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E9AFA650218A9AF800244588 /* SentryStudy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E9AFA667218A9AF900244588 /* Build configuration list for PBXNativeTarget "SentryStudy" */;
+			buildPhases = (
+				7181B7F2B928036F79106085 /* [CP] Check Pods Manifest.lock */,
+				E9AFA64D218A9AF800244588 /* Sources */,
+				E9AFA64E218A9AF800244588 /* Frameworks */,
+				E9AFA64F218A9AF800244588 /* Resources */,
+				FD02D356872968169634BB07 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+				E9AFA66A218A9F7A00244588 /* PBXBuildRule */,
+			);
+			dependencies = (
+			);
+			name = SentryStudy;
+			productName = SentryStudy;
+			productReference = E9AFA651218A9AF800244588 /* SentryStudy.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E9AFA649218A9AF800244588 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = studydaily;
+				TargetAttributes = {
+					E9AFA650218A9AF800244588 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = E9AFA64C218A9AF800244588 /* Build configuration list for PBXProject "SentryStudy" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E9AFA648218A9AF800244588;
+			productRefGroup = E9AFA652218A9AF800244588 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E9AFA650218A9AF800244588 /* SentryStudy */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E9AFA64F218A9AF800244588 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9AFA661218A9AF900244588 /* LaunchScreen.storyboard in Resources */,
+				E9AFA65E218A9AF900244588 /* Assets.xcassets in Resources */,
+				E9AFA65C218A9AF800244588 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7181B7F2B928036F79106085 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SentryStudy-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD02D356872968169634BB07 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SentryStudy/Pods-SentryStudy-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Sentry/Sentry.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Sentry.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SentryStudy/Pods-SentryStudy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E9AFA64D218A9AF800244588 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9AFA659218A9AF800244588 /* ViewController.mm in Sources */,
+				E9AFA664218A9AF900244588 /* main.m in Sources */,
+				E9AFA656218A9AF800244588 /* AppDelegate.m in Sources */,
+				E9AFA66D218C407100244588 /* SentryCrumbsViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E9AFA65A218A9AF800244588 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E9AFA65B218A9AF800244588 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E9AFA65F218A9AF900244588 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E9AFA660218A9AF900244588 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E9AFA665218A9AF900244588 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E9AFA666218A9AF900244588 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E9AFA668218A9AF900244588 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C9CD5FB477718C7B53D8018 /* Pods-SentryStudy.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = LV862RG599;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = SentryStudy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.study.daily.SentryStudy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E9AFA669218A9AF900244588 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 399695F0A82A07FD6F0F0316 /* Pods-SentryStudy.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LV862RG599;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = SentryStudy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.study.daily.SentryStudy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E9AFA64C218A9AF800244588 /* Build configuration list for PBXProject "SentryStudy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9AFA665218A9AF900244588 /* Debug */,
+				E9AFA666218A9AF900244588 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E9AFA667218A9AF900244588 /* Build configuration list for PBXNativeTarget "SentryStudy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9AFA668218A9AF900244588 /* Debug */,
+				E9AFA669218A9AF900244588 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E9AFA649218A9AF800244588 /* Project object */;
+}
