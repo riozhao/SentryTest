@@ -34,9 +34,9 @@
 
 - (void)makeCrash:(id)send{
  
-    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
-    NSString *value = nil;
-    [dic setObject:value forKey:@"123"];
+//    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+//    NSString *value = nil;
+//    [dic setObject:value forKey:@"123"];
 }
 
 /*
